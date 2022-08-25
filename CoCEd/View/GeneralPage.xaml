@@ -35,11 +35,11 @@
                 <common:AutoGrid>
                     <TextBlock              Text="Name" Width="Auto" Foreground="{StaticResource MainTextColor}"/>
                     <TextBox                Text="{Binding Game.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="8,4,8,4" Width="150" HorizontalAlignment="Left"
-                                                BorderBrush="Transparent" Height="22" VerticalContentAlignment="Center" Padding="3,0" Background="#181b29" Foreground="Silver"/>
+                                                BorderBrush="Transparent" Height="22" VerticalContentAlignment="Center" Padding="3,0" Background="{StaticResource InputFieldBg}" Foreground="Silver"/>
 
                     <TextBlock              Text="Notes" Width="Auto" Foreground="{StaticResource MainTextColor}"/>
                     <TextBox                Text="{Binding Game.Notes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="8,4,8,4" Width="150" HorizontalAlignment="Left"
-                                                BorderBrush="Transparent" Height="22" VerticalContentAlignment="Center" Padding="3,0" Background="#181b29" Foreground="Silver"/>
+                                                BorderBrush="Transparent" Height="22" VerticalContentAlignment="Center" Padding="3,0" Background="{StaticResource InputFieldBg}" Foreground="Silver"/>
 
                     <TextBlock              Text="Gems" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Gems}" Upper="10000" UpperLabel="10k"/>

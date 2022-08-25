@@ -94,30 +94,30 @@
                     <TextBlock Text="Lower Body" Style="{StaticResource Header}"/>
                 </Border>
                 <common:AutoGrid>
-                    <TextBlock              Text="Butt"/>
+                    <TextBlock              Text="Butt" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.ButtRating}" Upper="20" Tip="{Binding Game.ButtRatingTip}"/>
 
-                    <TextBlock              Text="Hips &amp; thighs"/>
+                    <TextBlock              Text="Hips &amp; thighs" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.HipRating}" Upper="20" Tip="{Binding Game.HipRatingTip}"/>
 
-                    <TextBlock              Text="Lower body"/>
+                    <TextBlock              Text="Lower body" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.LowerBodyType}" ItemsSource="{Binding Data.Body.LowerBodyTypes}"/>
                 </common:AutoGrid>
                 <common:AutoGrid IsEnabled="{Binding Game.HasLegConfigs}" Visibility="{Binding Game.RevampVisibility, FallbackValue={x:Static Visibility.Collapsed}}">
-                    <TextBlock              Text="Leg configuration"/>
+                    <TextBlock              Text="Leg configuration" Foreground="{StaticResource MainTextColor}"/>
                     <ComboBox               SelectedIndex="{Binding Game.LegConfigs}">
                         <ComboBoxItem>Biped</ComboBoxItem>
                         <ComboBoxItem>Quadruped</ComboBoxItem>
                     </ComboBox>
                 </common:AutoGrid>
                 <common:AutoGrid>
-                    <TextBlock              Text="Tail"/>
+                    <TextBlock              Text="Tail" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.TailType}" ItemsSource="{Binding Data.Body.TailTypes}"/>
                     
-                    <TextBlock              Text="{Binding Game.TailValueLabel}" IsEnabled="{Binding Game.IsTailValueEnabled}"/>
+                    <TextBlock              Text="{Binding Game.TailValueLabel}" IsEnabled="{Binding Game.IsTailValueEnabled}" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.TailValue}" IsEnabled="{Binding Game.IsTailValueEnabled}"/>
 
-                    <TextBlock              Text="Tail recharge" IsEnabled="{Binding Game.IsTailRechargeEnabled}"/>
+                    <TextBlock              Text="Tail recharge" IsEnabled="{Binding Game.IsTailRechargeEnabled}" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.TailRecharge}" IsEnabled="{Binding Game.IsTailRechargeEnabled}"/>
                 </common:AutoGrid>
             </StackPanel>
@@ -131,16 +131,16 @@
                         </DataTemplate>
                     </common:ArrayEditor.ItemTemplate>
                     <common:AutoGrid>
-                        <TextBlock              Text="Rating"/>
+                        <TextBlock              Text="Rating" Foreground="{StaticResource MainTextColor}"/>
                         <common:MyNumericBox    Value="{Binding Rating}" Min="0" Lower="0" Upper="{Binding MaxRating}" Tip="{Binding RatingDescription}"/>
 
-                        <TextBlock              Text="Breast count"/>
+                        <TextBlock              Text="Breast count" Foreground="{StaticResource MainTextColor}"/>
                         <common:MyNumericBox    Value="{Binding BreastCount}" Min="1" Lower="2"/>
 
-                        <TextBlock              Text="Nipples per breast"/>
+                        <TextBlock              Text="Nipples per breast" Foreground="{StaticResource MainTextColor}"/>
                         <common:MyNumericBox    Value="{Binding NipplesPerBreast}" Lower="1"/>
 
-                        <TextBlock              Text="Lactation multiplier"/>
+                        <TextBlock              Text="Lactation multiplier" Foreground="{StaticResource MainTextColor}"/>
                         <common:MyNumericBox    Value="{Binding LactationMultiplier}" Type="Double" Tip="{Binding MilkVolume}"/>
 
                         <Border/>
@@ -149,10 +149,10 @@
                 </common:ArrayEditor>
 
                 <common:AutoGrid Margin="0,30,0,0" Visibility="{Binding Game.NippleVisibility}">
-                    <TextBlock              Text="Nipple length"/>
+                    <TextBlock              Text="Nipple length" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.NippleLength}" Type="Double" Unit="inches"/>
 
-                    <TextBlock              Text="Nipples piercing"/>
+                    <TextBlock              Text="Nipples piercing" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyPiercingBox   DataContext="{Binding Game.NipplesPiercing}"/>
 
                     <Border/>

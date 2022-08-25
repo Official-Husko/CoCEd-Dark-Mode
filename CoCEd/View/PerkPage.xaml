@@ -53,7 +53,7 @@
         </Grid.RowDefinitions>
         <common:SearchBox Text="{Binding Game.PerkSearchText}"/>
 
-        <TreeView Grid.Row="1" ItemsSource="{Binding Game.PerkGroups}" ItemContainerStyle="{StaticResource GroupStyle}" Focusable="False" KeyboardNavigation.DirectionalNavigation="Contained" BorderThickness="0" Margin="10,0,0,0"
+        <TreeView Grid.Row="1" ItemsSource="{Binding Game.PerkGroups}" ItemContainerStyle="{StaticResource GroupStyle}" Focusable="False" KeyboardNavigation.DirectionalNavigation="Contained" BorderThickness="0" Margin="0,0,0,0"
                   HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
     </Grid>
 </UserControl>

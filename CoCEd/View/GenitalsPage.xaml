@@ -48,16 +48,16 @@
                 </Border>
 
                 <common:AutoGrid>
-                    <TextBlock              Text="Count"/>
+                    <TextBlock              Text="Count" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Balls}"/>
 
-                    <TextBlock              Text="Size"/>
+                    <TextBlock              Text="Size" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.BallSize}" Type="Double" Unit="inches" Max="400"/>
 
-                    <TextBlock              Text="Cum multiplier"/>
+                    <TextBlock              Text="Cum multiplier" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.CumMultiplier}" Type="Double" Tip="{Binding Game.CumProduction}" Max="9999"/>
                     
-                    <TextBlock              Text="Hours since cum"/>
+                    <TextBlock              Text="Hours since cum" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.HoursSinceCum}" Unit="Hours" Tip="{Binding Game.CumVolume}"/>
 
                     <Border/>
@@ -104,13 +104,13 @@
                 </Border>
 
                 <common:AutoGrid>
-                    <TextBlock              Text="Looseness"/>
+                    <TextBlock              Text="Looseness" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.Ass.Looseness}" ItemsSource="{Binding Data.Body.AnalLoosenessLevels}"/>
 
-                    <TextBlock              Text="Wetness"/>
+                    <TextBlock              Text="Wetness" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.Ass.Wetness}" ItemsSource="{Binding Data.Body.AnalWetnessLevels}"/>
 
-                    <TextBlock              Text="Capacity bonus&#x202F;*" ToolTip="In respect of cock length &#x00D7; thickness."/>
+                    <TextBlock              Text="Capacity bonus&#x202F;*" ToolTip="In respect of cock length &#x00D7; thickness." Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.AnalCapacityBonus}" Type="Double" Unit="inches²"/>
                 </common:AutoGrid>
             </StackPanel>
@@ -144,10 +144,10 @@
                 </common:ArrayEditor>
 
                 <common:AutoGrid Margin="0,30,0,0" Visibility="{Binding Game.ClitVisibility}">
-                    <TextBlock              Text="Clit length"/>
+                    <TextBlock              Text="Clit length" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.ClitLength}" Type="Double" Unit="inches"/>
 
-                    <TextBlock              Text="Capacity bonus&#x202F;*" ToolTip="In respect of cock length &#x00D7; thickness."/>
+                    <TextBlock              Text="Capacity bonus&#x202F;*" ToolTip="In respect of cock length &#x00D7; thickness." Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.VaginalCapacityBonus}" Type="Double" Unit="inches²"/>
                 </common:AutoGrid>
             </StackPanel>

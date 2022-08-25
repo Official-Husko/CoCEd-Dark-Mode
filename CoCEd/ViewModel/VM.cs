@@ -24,7 +24,7 @@ namespace CoCEd.ViewModel
         public event SaveRequiredChanged SaveRequiredChanged;
         public event EventHandler FileOpened;
 
-        const string AppTitle = "CoCEd";
+        const string AppTitle = "CoCEd - Dark Mode";
 
         readonly List<string> _externalPaths = new List<string>();
         AmfFile _currentFile;

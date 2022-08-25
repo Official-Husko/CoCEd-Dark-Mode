@@ -18,6 +18,8 @@
     <!-- Main Text color  -->
     <SolidColorBrush x:Key="MainTextColor" Color="Silver"/>
 
+    <SolidColorBrush x:Key="InputFieldBg" Color="#181b29"/>
+    
     <!-- Unkown -->
     <LinearGradientBrush x:Key="ToolTipBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
         <GradientStop Color="Green" Offset="0.0"/>
@@ -172,15 +174,15 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border x:Name="root" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="DarkViolet" SnapsToDevicePixels="True" Background="DeepPink">
+                    <Border x:Name="root" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="DarkViolet" SnapsToDevicePixels="True" Background="#24293f">
                         <ContentPresenter x:Name="presenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="{TemplateBinding Padding}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="root" Property="Background" Value="Red"/>
+                            <Setter TargetName="root" Property="Background" Value="#3a4264"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter TargetName="root" Property="Background" Value="DarkRed"/>
+                            <Setter TargetName="root" Property="Background" Value="#1c2030"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -245,6 +247,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type common:MyComboBox}" >
                     <ComboBox x:Name="combo" DisplayMemberPath="Name" SelectedValuePath="ID" Width="150" Margin="0" Foreground="Silver" Background="#1c2030" BorderThickness="0" BorderBrush="Transparent"
+                              FocusVisualStyle="{x:Null}"
                               ItemContainerStyle="{StaticResource MyComboBoxItem}"
                               SelectedValue="{Binding Path=SelectedValue, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" />
                 </ControlTemplate>
@@ -300,22 +303,22 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <TextBlock Text="Type" Grid.Row="0" VerticalAlignment="Center" Foreground="Silver"/>
-                                    <common:MyComboBox x:Name="typeCombo" Grid.Column="1" Grid.Row="0" SelectedValue="{Binding Type}" ItemsSource="{Binding AllTypes}" HorizontalAlignment="Right"/>
+                                    <common:MyComboBox x:Name="typeCombo" Grid.Column="1" Grid.Row="0" SelectedValue="{Binding Type}" ItemsSource="{Binding AllTypes}" HorizontalAlignment="Right" Background="{StaticResource InputFieldBg}"/>
                                     <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Foreground="#808080" Margin="3,0,0,0" Text="Cosmetic changes only.  Perks and/or Ceraph's flag will not be modified." TextWrapping="Wrap" TextAlignment="Justify" />
 
-                                    <ComboBox x:Name="nameCombo" Grid.Row="3" Grid.ColumnSpan="2" IsEditable="True" IsTextSearchCaseSensitive="False" IsTextSearchEnabled="False" Text="{Binding UpperName}" IsEnabled="{Binding CanEditName}" ItemsSource="{Binding SuggestedNames}" Height="26" Width="220" Margin="0" VerticalContentAlignment="Center"/>
+                                    <ComboBox x:Name="nameCombo" Grid.Row="3" Grid.ColumnSpan="2" IsEditable="True" IsTextSearchCaseSensitive="False" IsTextSearchEnabled="False" Text="{Binding UpperName}" IsEnabled="{Binding CanEditName}" ItemsSource="{Binding SuggestedNames}" Height="26" Width="220" Margin="0" VerticalContentAlignment="Center" Background="{StaticResource InputFieldBg}" BorderBrush="Transparent" BorderThickness="0"/>
                                     <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Text="E.g. Diamond eyebrow-stud" IsEnabled="{Binding CanEditName}" Foreground="#808080" VerticalAlignment="Center" Margin="3,2,0,0"/>
 
-                                    <TextBox Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding LowerName}" IsEnabled="{Binding CanEditName}" Height="26" VerticalContentAlignment="Center"/>
-                                    <TextBlock Grid.Row="7" Grid.ColumnSpan="2" Text="E.g. diamond eyebrow-stud" IsEnabled="{Binding CanEditName}" Foreground="#808080" VerticalAlignment="Center" Margin="3,2,0,0"/>
+                                    <TextBox Grid.Row="6" Grid.ColumnSpan="2" Text="{Binding LowerName}" IsEnabled="{Binding CanEditName}" Height="26" VerticalContentAlignment="Center" Background="{StaticResource InputFieldBg}"/>
+                                    <TextBlock Grid.Row="7" Grid.ColumnSpan="2" Text="E.g. diamond eyebrow-stud" IsEnabled="{Binding CanEditName}" Foreground="#808080" VerticalAlignment="Center" Margin="3,2,0,0" />
                                 </Grid>
                             </Border>
                         </Popup>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter TargetName="root" Property="Background" Value="#F0F0F0"/>
-                            <Setter TargetName="root" Property="BorderBrush" Value="#D9D9D9"/>
+                            <Setter TargetName="root" Property="Background" Value="{StaticResource NumericDisabledBackground}"/>
+                            <Setter TargetName="root" Property="BorderThickness" Value="0"/>
                             <Setter TargetName="separator" Property="Fill" Value="#C0C0C0"/>
                             <Setter TargetName="ellipsis" Property="Foreground" Value="#C0C0C0"/>
                         </Trigger>
@@ -333,7 +336,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border x:Name="root" Background="#00FFFFFF" BorderBrush="#00FFFFFF" BorderThickness="1" SnapsToDevicePixels="True">
+                    <Border x:Name="root" Background="#00FFFFFF" BorderBrush="#00FFFFFF" BorderThickness="0" SnapsToDevicePixels="True">
                         <StackPanel Orientation="Horizontal" Margin="4,4">
                             <Image x:Name="icon" Source="{StaticResource SearchIcon}" Width="15" Height="15" SnapsToDevicePixels="True"/>
                             <Path x:Name="arrow" Fill="Black" Data="M 0 0 L 5 5 L 10 0 Z" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,0,0,0" SnapsToDevicePixels="True"/>
@@ -356,7 +359,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type common:NamedVector4Control}">
                     <!-- Search Results Background -->
-                    <Grid x:Name="root" Background="Gray">
+                    <Grid x:Name="root" Background="#131621">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
@@ -379,7 +382,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger SourceName="border" Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#F8F8F8"/>
+                            <Setter TargetName="border" Property="Background" Value="#292e47"/>
                         </Trigger>
                         <Trigger SourceName="checkBox" Property="IsChecked" Value="False">
                             <Setter TargetName="subtitle" Property="Foreground" Value="#A0A0A0"/>
@@ -408,7 +411,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type common:NamedVector4Popup}">
                     <Popup x:Name="popup" Placement="Bottom" StaysOpen="False">
-                        <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                        <Border Background="White" BorderBrush="Black" BorderThickness="0">
                             <common:AutoGrid Margin="20">
                                 <TextBlock Text="{Binding Label1}" Foreground="#606060" VerticalAlignment="Center"/>
                                 <common:MyNumericBox Value="{Binding Value1}" Type="{Binding Type1}" Min="{x:Null}" Lower="{x:Null}" Margin="6,2,0,2" Width="70"/>
@@ -441,7 +444,7 @@
                 <ControlTemplate TargetType="{x:Type common:SearchBox}">
                     <Grid HorizontalAlignment="Stretch">
                         <TextBlock x:Name="prompt" Text="Search&#x2026;" Foreground="#A0A0A0" Margin="10,0" Padding="0" Width="Auto" HorizontalAlignment="Left" TextAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBox Height="28" VerticalAlignment="Center" VerticalContentAlignment="Center" Padding="6,0" Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}" Background="Transparent"/>
+                        <TextBox Height="28" VerticalAlignment="Center" VerticalContentAlignment="Center" Padding="6,0" Text="{Binding Path=Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}" Background="Transparent" BorderThickness="0"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

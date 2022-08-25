@@ -12,7 +12,7 @@
         </ResourceDictionary>
     </Window.Resources>
     
-    <Grid HorizontalAlignment="Stretch" Background="White">
+    <Grid HorizontalAlignment="Stretch" Background="#131621">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -35,8 +35,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto" MaxHeight="200"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="Reporting the error" FontWeight="Bold"/>
-            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,5,0,0" Grid.Row="1">
+            <TextBlock Text="Reporting the error" FontWeight="Bold"  Foreground="{StaticResource MainTextColor}"/>
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,5,0,0" Grid.Row="1"  Foreground="{StaticResource MainTextColor}">
                 Please report this error by copying it and either posting a message in
                 <Hyperlink NavigateUri="http://fenoxo.com/forum/index.php?/topic/57-coced-a-save-editor/" RequestNavigate="requestNavigate">CoCEd's forum thread</Hyperlink>,
                 at fenoxo.com, or opening a ticket in
@@ -58,8 +58,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Path" FontWeight="Bold"/>
-            <TextBlock x:Name="folderText" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,5,0,0" Grid.Row="1"/>
+            <TextBlock Text="Path" FontWeight="Bold"  Foreground="{StaticResource MainTextColor}"/>
+            <TextBlock x:Name="folderText" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,5,0,0" Grid.Row="1"  Foreground="{StaticResource MainTextColor}"/>
             <Button Click="openFolder_Click" VerticalAlignment="Top" Margin="10,0,0,0"  Grid.Row="1" Grid.Column="1">Open</Button>
         </Grid>
 
@@ -72,9 +72,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Error message" FontWeight="Bold"/>
+            <TextBlock Text="Error message" FontWeight="Bold"  Foreground="{StaticResource MainTextColor}"/>
             <ScrollViewer Margin="0,5,0,0" Grid.Row="1" >
-                <TextBlock x:Name="exceptionText" VerticalAlignment="Top" TextWrapping="Wrap"/>
+                <TextBlock x:Name="exceptionText" VerticalAlignment="Top" TextWrapping="Wrap"  Foreground="{StaticResource MainTextColor}"/>
             </ScrollViewer>
             <Button Click="copyException_Click" VerticalAlignment="Top" Margin="10,0,0,0" Grid.Row="1" Grid.Column="1">Copy</Button>
         </Grid>

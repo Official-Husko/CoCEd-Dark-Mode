@@ -11,7 +11,7 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#131621">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Image x:Name="image" Width="32" Height="32" VerticalAlignment="Top"/>
-            <TextBlock Text="This savegame has been changed. Do you still want to close this application?" VerticalAlignment="Center" TextWrapping="Wrap" Grid.Column="1" Margin="10,0,0,0"/>
+            <TextBlock Text="This savegame has been changed. Do you still want to close this application?" VerticalAlignment="Center" TextWrapping="Wrap" Grid.Column="1" Margin="10,0,0,0"  Foreground="{StaticResource MainTextColor}"/>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
             <Button Click="close_Click">Close</Button>
