@@ -33,21 +33,21 @@
 
             <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
                 <common:AutoGrid>
-                    <TextBlock              Text="Name" Width="Auto"/>
+                    <TextBlock              Text="Name" Width="Auto" Foreground="{StaticResource MainTextColor}"/>
                     <TextBox                Text="{Binding Game.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="8,4,8,4" Width="150" HorizontalAlignment="Left"
-                                                BorderBrush="{StaticResource NumericBorderBrush}" Height="22" VerticalContentAlignment="Center" Padding="3,0"/>
+                                                BorderBrush="Transparent" Height="22" VerticalContentAlignment="Center" Padding="3,0" Background="#181b29" Foreground="Silver"/>
 
-                    <TextBlock              Text="Notes" Width="Auto"/>
+                    <TextBlock              Text="Notes" Width="Auto" Foreground="{StaticResource MainTextColor}"/>
                     <TextBox                Text="{Binding Game.Notes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="8,4,8,4" Width="150" HorizontalAlignment="Left"
-                                                BorderBrush="{StaticResource NumericBorderBrush}" Height="22" VerticalContentAlignment="Center" Padding="3,0"/>
+                                                BorderBrush="Transparent" Height="22" VerticalContentAlignment="Center" Padding="3,0" Background="#181b29" Foreground="Silver"/>
 
-                    <TextBlock              Text="Gems"/>
+                    <TextBlock              Text="Gems" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Gems}" Upper="10000" UpperLabel="10k"/>
 
-                    <TextBlock              Text="Days"/>
+                    <TextBlock              Text="Days" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Days}" Unit="days"/>
 
-                    <TextBlock              Text="Time"/>
+                    <TextBlock              Text="Time" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Hours}" Upper="23" Max="23" Unit="hours"/>
                 </common:AutoGrid>
             </StackPanel>
@@ -57,58 +57,58 @@
                     <TextBlock Text="Stats" Style="{StaticResource Header}"/>
                 </Border>
                 <common:AutoGrid>
-                    <TextBlock              Text="Strength"/>
+                    <TextBlock              Text="Strength" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Strength}" Upper="100"/>
 
-                    <TextBlock              Text="Toughness"/>
+                    <TextBlock              Text="Toughness" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Toughness}" Upper="100"/>
 
-                    <TextBlock              Text="Speed"/>
+                    <TextBlock              Text="Speed" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Speed}" Upper="100"/>
 
-                    <TextBlock              Text="Intelligence"/>
+                    <TextBlock              Text="Intelligence" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Intelligence}" Upper="100"/>
 
-                    <TextBlock              Text="Libido"/>
+                    <TextBlock              Text="Libido" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Libido}" Upper="100"/>
 
-                    <TextBlock              Text="Sensitivity"/>
+                    <TextBlock              Text="Sensitivity" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Sensitivity}" Upper="100"/>
 
-                    <TextBlock              Text="Corruption"/>
+                    <TextBlock              Text="Corruption" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Corruption}" Upper="100"/>
                 </common:AutoGrid>
                 <common:AutoGrid Margin="0,30,0,0">
-                    <TextBlock              Text="Current HP"/>
+                    <TextBlock              Text="Current HP" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.HP}" Upper="{Binding Game.MaxHP}"/>
 
-                    <TextBlock              Text="Lust"/>
+                    <TextBlock              Text="Lust" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Lust}" Upper="{Binding Game.MaxLust}"/>
 
-                    <TextBlock              Text="Fatigue"/>
+                    <TextBlock              Text="Fatigue" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Fatigue}" Upper="{Binding Game.MaxFatigue}"/>
                 </common:AutoGrid>
                 <common:AutoGrid Margin="0,30,0,0" IsEnabled="{Binding Game.IsRevamp}" Visibility="{Binding Game.RevampVisibility, FallbackValue={x:Static Visibility.Collapsed}}">
-                    <TextBlock              Text="Hunger"/>
+                    <TextBlock              Text="Hunger" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Hunger}" Min="0" Max="100" Upper="100" Tip="{Binding Game.HungerTip}"/>
                 </common:AutoGrid>
             </StackPanel>
 
             <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Vertical">
                 <common:AutoGrid>
-                    <TextBlock              Text="Level"/>
+                    <TextBlock              Text="Level" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Level}"/>
 
-                    <TextBlock              Text="Perk points"/>
+                    <TextBlock              Text="Perk points" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.PerkPoints}"/>
 
-                    <TextBlock              Text="Tease skill"/>
+                    <TextBlock              Text="Tease skill" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.TeaseLevel}" Upper="5"/>
 
-                    <TextBlock              Text="Rapier skill&#x202F;*" ToolTip="+2 damage points per skill point with rapiers."/>
+                    <TextBlock              Text="Rapier skill&#x202F;*" ToolTip="+2 damage points per skill point with rapiers." Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.RapierSkill}" Upper="4"/>
 
-                    <TextBlock              Text="Archery skill" IsEnabled="{Binding Game.HasMetKelt}"/>
+                    <TextBlock              Text="Archery skill" IsEnabled="{Binding Game.HasMetKelt}" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.ArcherySkill}" Unit="%" Upper="100" IsEnabled="{Binding Game.HasMetKelt}"/>
                 </common:AutoGrid>
             </StackPanel>
@@ -119,57 +119,57 @@
                 </Border>
 
                 <common:AutoGrid>
-                    <TextBlock              Text="Hair length"/>
+                    <TextBlock              Text="Hair length" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.HairLength}" Type="Double" Unit="inches"/>
 
-                    <TextBlock              Text="Hair color"/>
+                    <TextBlock              Text="Hair color" Foreground="{StaticResource MainTextColor}"/>
                     <ComboBox Text="{Binding Game.HairColor}" ItemsSource="{Binding Data.Body.HairColors}" Style="{StaticResource EditableTextBox}"/>
 
-                    <TextBlock              Text="Hair type"/>
+                    <TextBlock              Text="Hair type" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.HairType}" ItemsSource="{Binding Data.Body.HairTypes}"/>
                 </common:AutoGrid>
                 <common:AutoGrid IsEnabled="{Binding Game.IsRevamp}" Visibility="{Binding Game.RevampVisibility, FallbackValue={x:Static Visibility.Collapsed}}">
-                    <TextBlock              Text="Beard length&#x202F;*" ToolTip="Enable with any value greater than 0."/>
+                    <TextBlock              Text="Beard length&#x202F;*" ToolTip="Enable with any value greater than 0." Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.BeardLength}" Type="Double" Unit="inches"/>
 
-                    <TextBlock              Text="Beard style"/>
+                    <TextBlock              Text="Beard style" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.BeardType}" ItemsSource="{Binding Data.Body.BeardTypes}"/>
                 </common:AutoGrid>
                 <common:AutoGrid>
-                    <TextBlock              Text="Face"/>
+                    <TextBlock              Text="Face" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.FaceType}" ItemsSource="{Binding Data.Body.FaceTypes}"/>
 
-                    <TextBlock              Text="Tongue"/>
+                    <TextBlock              Text="Tongue" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.TongueType}" ItemsSource="{Binding Data.Body.TongueTypes}"/>
 
-                    <TextBlock              Text="Eyes"/>
+                    <TextBlock              Text="Eyes" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.EyeType}" ItemsSource="{Binding Data.Body.EyeTypes}"/>
 
-                    <TextBlock              Text="Ears"/>
+                    <TextBlock              Text="Ears" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.EarType}" ItemsSource="{Binding Data.Body.EarTypes}"/>
 
-                    <TextBlock              Text="Antennae"/>
+                    <TextBlock              Text="Antennae" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.AntennaeType}" ItemsSource="{Binding Data.Body.AntennaeTypes}"/>
 
-                    <TextBlock              Text="Horns"/>
+                    <TextBlock              Text="Horns" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.HornType}" ItemsSource="{Binding Data.Body.HornTypes}"/>
 
                     <TextBlock              Text="{Binding Game.HornsValueLabel}" IsEnabled="{Binding Game.HornsValueEnabled}"/>
                     <common:MyNumericBox    Value="{Binding Game.HornsValue}" Unit="{Binding Game.HornsValueUnit}" IsEnabled="{Binding Game.HornsValueEnabled}"/>
 
-                    <TextBlock              Text="Eyebrow piercing"/>
+                    <TextBlock              Text="Eyebrow piercing" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyPiercingBox   DataContext="{Binding Game.EyebrowPiercing}"/>
                 
-                    <TextBlock              Text="Ears piercing"/>
+                    <TextBlock              Text="Ears piercing" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyPiercingBox   DataContext="{Binding Game.EarsPiercing}"/>
 
-                    <TextBlock              Text="Nose piercing"/>
+                    <TextBlock              Text="Nose piercing" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyPiercingBox   DataContext="{Binding Game.NosePiercing}"/>
 
-                    <TextBlock              Text="Lip piercing"/>
+                    <TextBlock              Text="Lip piercing" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyPiercingBox   DataContext="{Binding Game.LipPiercing}"/>
 
-                    <TextBlock              Text="Tongue piercing"/>
+                    <TextBlock              Text="Tongue piercing" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyPiercingBox   DataContext="{Binding Game.TonguePiercing}"/>
                 </common:AutoGrid>
             </StackPanel>

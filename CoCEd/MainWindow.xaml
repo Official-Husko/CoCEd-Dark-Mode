@@ -4,28 +4,30 @@
         xmlns:common="clr-namespace:CoCEd.Common" 
         xmlns:view="clr-namespace:CoCEd.View" 
         xmlns:vm="clr-namespace:CoCEd.ViewModel" 
-        Title="CoCEd" 
+        Title="CoCEd - Dark Mode" 
         DataContext="{x:Static vm:VM.Instance}"
         Width="1024" Height="768" MinWidth="1024" MinHeight="600">
-
+    
+    
     <Window.Resources>
+        <!-- Tab Colors -->
         <Style x:Key="{x:Type TabItem}" TargetType="{x:Type TabItem}">
             <Setter Property="Margin" Value="0"/>
             <Setter Property="Padding" Value="0"/>
-            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="BorderThickness" Value="0,0,0,0"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TabItem}">
-                        <Border x:Name="root" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="#303030" SnapsToDevicePixels="True" Margin="{TemplateBinding Padding}" Background="#00FFFFFF">
-                            <TextBlock x:Name="text" Text="{TemplateBinding Header}" Foreground="#E0E0E0" FontSize="12" HorizontalAlignment="Center" Margin="20,8,20,12"/>
+                        <Border x:Name="root" BorderThickness="0" BorderBrush="Transparent" SnapsToDevicePixels="True" Margin="0" Background="#181b29">
+                            <TextBlock x:Name="text" Text="{TemplateBinding Header}" Foreground="#909090" FontSize="12" HorizontalAlignment="Center" Margin="20,8,20,12"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="text" Property="Foreground" Value="White"/>
+                                <Setter TargetName="text" Property="Foreground" Value="#838383"/>
                             </Trigger>
                             <Trigger Property="IsSelected" Value="True">
-                                <Setter TargetName="text" Property="Foreground" Value="#DA3100"/>
-                                <Setter TargetName="root" Property="Background" Value="White"/>
+                                <Setter TargetName="text" Property="Foreground" Value="#dfdfdf"/>
+                                <Setter TargetName="root" Property="Background" Value="DodgerBlue"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -33,50 +35,50 @@
             </Setter>
         </Style>
     </Window.Resources>
-
+   
     <Grid>
         <Border HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="45">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="0" Color="#404040"/>
-                    <GradientStop Offset="1" Color="#303030"/>
+                    <GradientStop Offset="0" Color="#181b29"/>
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
 
-        <TabControl Margin="0,-2,0,0" IsEnabled="{Binding HasData}" Padding="0" BorderThickness="0">
-            <TabItem Header="General" Padding="5,0,0,0">
-                <view:GeneralPage Background="White"/>
+        <!-- Page Backgrounds -->
+        <TabControl Margin="0,0,0,0" IsEnabled="{Binding HasData}" Padding="0" BorderThickness="0">
+            <TabItem Header="General" Padding="0,0,0,0">
+                <view:GeneralPage Background="#0f111a"/>
             </TabItem>
             <TabItem Header="Body">
-                <view:BodyPage Background="White"/>
+                <view:BodyPage Background="#0f111a"/>
             </TabItem>
             <TabItem Header="Genitals">
-                <view:GenitalsPage Background="White"/>
+                <view:GenitalsPage Background="#0f111a"/>
             </TabItem>
             <TabItem Header="Others">
-                <view:MiscPage Background="White"/>
+                <view:MiscPage Background="#0f111a"/>
             </TabItem>
             <TabItem Header="Locations">
-                <view:LocationsPage Background="White"/>
+                <view:LocationsPage Background="#0f111a"/>
             </TabItem>
             <TabItem Header="Items">
-                <view:ItemsPage Background="White"/>
+                <view:ItemsPage Background="#0f111a"/>
             </TabItem>
             <TabItem Header="Key Items">
-                <view:KeyItemsPage Background="White"/>
+                <view:KeyItemsPage Background="#0f111a"/>
             </TabItem>
             <TabItem Header="Perks">
-                <view:PerkPage Background="White"/>
+                <view:PerkPage Background="#0f111a"/>
             </TabItem>
-            <TabItem Header="Raw Data" BorderThickness="0">
-                <view:RawPage Background="White"/>
+            <TabItem Header="Raw Data">
+                <view:RawPage Background="#0f111a"/>
             </TabItem>
         </TabControl>
 
         <view:TopBar HorizontalAlignment="Stretch" Margin="0,7,5,0"/>
 
-        <TextBlock x:Name="versionLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,43,18,0" Foreground="#A0A0A0" FontSize="12"/>
+        <TextBlock x:Name="versionLabel" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,18,10"  Foreground="{StaticResource MainTextColor}" FontSize="12"/>
 
         <common:NamedVector4Popup x:Name="valuesPopup"/>
     </Grid>

@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CoCEd")]
-[assembly: AssemblyDescription("A save editor for Corruption of Champions.")]
+[assembly: AssemblyTitle("CoCEd Dark Mode")]
+[assembly: AssemblyDescription("A save editor for Corruption of Champions. Now featuring Dark Mode!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CoCEd")]
-[assembly: AssemblyCopyright("Copyright © 2013 Perdev")]
+[assembly: AssemblyProduct("CoCEd Dark Mode")]
+[assembly: AssemblyCopyright("Copyright © 2022 Husko & Perdev")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

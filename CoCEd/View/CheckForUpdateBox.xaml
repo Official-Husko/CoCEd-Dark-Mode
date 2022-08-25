@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#131621">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -24,22 +24,22 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Checking for updates to CoCEd…" VerticalAlignment="Center" TextWrapping="Wrap" Grid.Column="0" Margin="10,0,10,0"/>
+            <TextBlock Text="Checking for updates to CoCEd…" VerticalAlignment="Center" TextWrapping="Wrap" Grid.Column="0" Margin="10,0,10,0" Foreground="red"/>
             <ProgressBar IsIndeterminate="True" Minimum="0" Maximum="100" Value="0"
-                         HorizontalAlignment="Left" Height="14" VerticalAlignment="Center" Width="150" Grid.Column="1" Margin="0,0,0,0"/>
+                         HorizontalAlignment="Left" Height="14" VerticalAlignment="Center" Width="150" Grid.Column="1" Margin="0,0,0,0" Background="#181b29"/>
         </Grid>
         <Grid x:Name="statusGrid" Grid.Row="0" Visibility="Collapsed" Margin="20,10,10,10" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="statusText" VerticalAlignment="Center" TextWrapping="Wrap" Grid.Column="0" Margin="10,0,10,0">
-                <Hyperlink NavigateUri="https://github.com/tmedwards/CoCEd/releases/latest" RequestNavigate="requestNavigate">
+                <Hyperlink NavigateUri="https://github.com/Official-Husko/CoCEd-Dark-Mode/releases/latest" RequestNavigate="requestNavigate">
                     An update is available! (click to go to the download page)
                 </Hyperlink>
             </TextBlock>
         </Grid>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-            <Button Click="close_Click" IsDefault="True">Close</Button>
+            <Button Click="close_Click" IsDefault="True" Background="#181b29" >Close </Button>
         </StackPanel>
     </Grid>
 </Window>

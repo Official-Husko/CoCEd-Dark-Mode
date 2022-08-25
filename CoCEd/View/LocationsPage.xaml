@@ -89,24 +89,24 @@
                     <TextBlock Text="Places Unlocked" Style="{StaticResource Header}"/>
                 </Border>
                 <UniformGrid Columns="2" Width="250">
-                    <CheckBox Content="Tel'Adre" IsChecked="{Binding Game.UnlockedTelAdre}"/>
-                    <CheckBox Content="Bizarre Bazaar" IsChecked="{Binding Game.UnlockedBizarreBazaar}"/>
-                    <CheckBox Content="Whitney's Farm" IsChecked="{Binding Game.UnlockedFarm}"/>
-                    <CheckBox Content="Owca" IsChecked="{Binding Game.UnlockedOwca}"/>
-                    <CheckBox Content="Cathedral" IsChecked="{Binding Game.UnlockedCathedral}"/>
-                    <CheckBox Content="Salon" IsChecked="{Binding Game.UnlockedSalon}"/>
-                    <CheckBox Content="Town Ruins" IsChecked="{Binding Game.UnlockedTownRuins}"/>
-                    <CheckBox Content="Lake Boat" IsChecked="{Binding Game.UnlockedBoat}"/>
+                    <CheckBox Content="Tel'Adre" IsChecked="{Binding Game.UnlockedTelAdre}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Bizarre Bazaar" IsChecked="{Binding Game.UnlockedBizarreBazaar}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Whitney's Farm" IsChecked="{Binding Game.UnlockedFarm}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Owca" IsChecked="{Binding Game.UnlockedOwca}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Cathedral" IsChecked="{Binding Game.UnlockedCathedral}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Salon" IsChecked="{Binding Game.UnlockedSalon}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Town Ruins" IsChecked="{Binding Game.UnlockedTownRuins}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Lake Boat" IsChecked="{Binding Game.UnlockedBoat}" Foreground="{StaticResource MainTextColor}"/>
                 </UniformGrid>
 
                 <Border Style="{StaticResource HeaderBorder}" Margin="0,30,0,4">
                     <TextBlock Text="Dungeons Unlocked" Style="{StaticResource Header}"/>
                 </Border>
                 <UniformGrid Columns="2" Width="250">
-                    <CheckBox Content="Factory (D1)" IsChecked="{Binding Game.UnlockedDungeonFactory}"/>
-                    <CheckBox Content="Deep Cave (D2)" IsChecked="{Binding Game.UnlockedDungeonDeepCave}"/>
-                    <CheckBox Content="Stronghold (D3)" IsChecked="{Binding Game.UnlockedDungeonStronghold}"/>
-                    <CheckBox Content="Desert Cave" IsChecked="{Binding Game.UnlockedDungeonDesertCave}"/>
+                    <CheckBox Content="Factory (D1)" IsChecked="{Binding Game.UnlockedDungeonFactory}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Deep Cave (D2)" IsChecked="{Binding Game.UnlockedDungeonDeepCave}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Stronghold (D3)" IsChecked="{Binding Game.UnlockedDungeonStronghold}" Foreground="{StaticResource MainTextColor}"/>
+                    <CheckBox Content="Desert Cave" IsChecked="{Binding Game.UnlockedDungeonDesertCave}" Foreground="{StaticResource MainTextColor}"/>
                 </UniformGrid>
             </StackPanel>
         </Grid>

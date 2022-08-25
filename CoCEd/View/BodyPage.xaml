@@ -37,50 +37,50 @@
                     <TextBlock Text="Body" Style="{StaticResource Header}"/>
                 </Border>
                 <common:AutoGrid>
-                    <TextBlock              Text="Height"/>
+                    <TextBlock              Text="Height" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Height}" Type="Double" Unit="inches"/>
 
-                    <TextBlock              Text="Feminity"/>
+                    <TextBlock              Text="Feminity" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Feminity}" Upper="100" Tip="{Binding Game.FeminityTip}"/>
 
-                    <TextBlock              Text="Muscles"/>
+                    <TextBlock              Text="Muscles" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Muscles}" Upper="100" Tip="{Binding Game.MusclesTip}"/>
 
-                    <TextBlock              Text="Frame"/>
+                    <TextBlock              Text="Frame" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyNumericBox    Value="{Binding Game.Frame}" Upper="100" Tip="{Binding Game.FrameTip}"/>
 
-                    <TextBlock              Text="Skin type"/>
+                    <TextBlock              Text="Skin type" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.SkinType}" ItemsSource="{Binding Data.Body.SkinTypes}"/>
 
-                    <TextBlock              Text="Skin tone"/>
+                    <TextBlock              Text="Skin tone" Foreground="{StaticResource MainTextColor}"/>
                     <ComboBox               Text="{Binding Game.SkinTone}" ItemsSource="{Binding Data.Body.SkinTones}" Style="{StaticResource EditableTextBox}"/>
 
-                    <TextBlock              Text="Skin description"/>
+                    <TextBlock              Text="Skin description" Foreground="{StaticResource MainTextColor}"/>
                     <ComboBox               Text="{Binding Game.SkinDescription}" ItemsSource="{Binding Data.Body.SkinDescriptions}" Style="{StaticResource EditableTextBox}"/>
 
-                    <TextBlock              Text="Skin adjective"/>
+                    <TextBlock              Text="Skin adjective" Foreground="{StaticResource MainTextColor}"/>
                     <ComboBox               Text="{Binding Game.SkinAdjective}" ItemsSource="{Binding Data.Body.SkinAdjectives}" Style="{StaticResource EditableTextBox}"/>
                 </common:AutoGrid>
                 <common:AutoGrid IsEnabled="{Binding Game.IsRevamp}" Visibility="{Binding Game.RevampVisibility, FallbackValue={x:Static Visibility.Collapsed}}">
-                    <TextBlock              Text="Fur color" IsEnabled="{Binding Game.IsFurEnabled}"/>
+                    <TextBlock              Text="Fur color" IsEnabled="{Binding Game.IsFurEnabled}" Foreground="{StaticResource MainTextColor}"/>
                     <ComboBox               Text="{Binding Game.FurColor}" ItemsSource="{Binding Data.Body.FurColors}" Style="{StaticResource EditableTextBox}" IsEnabled="{Binding Game.IsFurEnabled}"/>
                 </common:AutoGrid>
                 <common:AutoGrid>
-                    <TextBlock              Text="Arms"/>
+                    <TextBlock              Text="Arms" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.ArmType}" ItemsSource="{Binding Data.Body.ArmTypes}"/>
                 </common:AutoGrid>
                 <common:AutoGrid IsEnabled="{Binding Game.IsRevamp}" Visibility="{Binding Game.RevampVisibility, FallbackValue={x:Static Visibility.Collapsed}}">
-                    <TextBlock              Text="Claws"/>
+                    <TextBlock              Text="Claws" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.ClawType}" ItemsSource="{Binding Data.Body.ClawTypes}"/>
 
-                    <TextBlock              Text="Claw tone"/>
+                    <TextBlock              Text="Claw tone" Foreground="{StaticResource MainTextColor}"/>
                     <ComboBox               Text="{Binding Game.ClawTone}" ItemsSource="{Binding Data.Body.ClawTones}" Style="{StaticResource EditableTextBox}"/>
                 </common:AutoGrid>
                 <common:AutoGrid>
-                    <TextBlock              Text="Wings/Fins"/>
+                    <TextBlock              Text="Wings/Fins" Foreground="{StaticResource MainTextColor}"/>
                     <common:MyComboBox      SelectedValue="{Binding Game.WingType}" ItemsSource="{Binding Data.Body.WingTypes}"/>
 
-                    <TextBlock              Text="Wings description" IsEnabled="{Binding Game.IsWingEnabled}"/>
+                    <TextBlock              Text="Wings description"  Foreground="{StaticResource MainTextColor}" IsEnabled="{Binding Game.IsWingEnabled}"/>
                     <ComboBox               Text="{Binding Game.WingDescription}" ItemsSource="{Binding Data.Body.WingDescriptions}" Style="{StaticResource EditableTextBox}" IsEnabled="{Binding Game.IsWingEnabled}"/>
 
                     <Border/>

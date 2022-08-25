@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <!-- Scrollbar Background -->
     <Style x:Key="ScrollBarPageButton" TargetType="{x:Type RepeatButton}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -10,12 +11,13 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
-                    <Border Background="#00FFFFFF" Margin="-4"/>
+                    <Border Background="#0F111A" Margin="-4"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
+    <!-- Scrollbar -->
     <Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -25,8 +27,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Border Background="#00FFFFFF" Margin="-4">
-                        <Border Background="#DA3100" BorderThickness="0" Margin="4"/>
+                    <!-- Scrollbar Border -->
+                    <Border Background="#24293f" Margin="-4">
+                        <!-- Scrollbar Color -->
+                        <Border Background="#24293f" BorderThickness="0" Margin="4"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -78,13 +82,14 @@
         </Setter>
     </Style>
 
+    <!-- Items Tab Inventory Color -->
     <Style x:Key="ScrollViewerWithLeftScrollBar" TargetType="ScrollViewer">
         <Setter Property="VerticalContentAlignment" Value="Top"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="VerticalScrollBarVisibility" Value="Visible"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Background" Value="#00FFFFFF"/>
+        <Setter Property="Background" Value="#181b29"/>
         <Setter Property="Padding" Value="0"/>
         <Setter Property="Margin" Value="0"/>
         <Setter Property="Template">
